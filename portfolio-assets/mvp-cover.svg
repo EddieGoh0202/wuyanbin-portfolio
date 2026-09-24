@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" role="img" aria-labelledby="title desc">
+  <title id="title">智能舆情系统 MVP · 产品概念预览</title>
+  <desc id="desc">深墨绿色背景中的智能舆情工作台，展示 AI 服务对话入口，以及日常监测、专项监测、事件研判和成果中心组成的动态工作区。</desc>
+  <defs>
+    <radialGradient id="glow" cx="92%" cy="4%" r="92%"><stop stop-color="#47624a"/><stop offset=".55" stop-color="#1b322b"/><stop offset="1" stop-color="#13251f"/></radialGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e3f7a2"/><stop offset="1" stop-color="#bfe174"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffef8"/><stop offset="1" stop-color="#eeeee4"/></linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#d4e5c6" opacity=".11"/></pattern>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="145%"><feDropShadow dx="0" dy="22" stdDeviation="25" flood-color="#071912" flood-opacity=".35"/></filter>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+      .mono{font-family:"SFMono-Regular",Consolas,monospace}
+      .ink{fill:#253e32}.muted{fill:#718072}.rule{stroke:#dfe3d6;stroke-width:1.5}
+      .icon{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="M12 1.8 15 9l7.2 3-7.2 3-3 7.2L9 15l-7.2-3L9 9Z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" class="icon"/></symbol>
+    <symbol id="radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2" class="icon"/><path d="M12 3.8V12l5.8-5.8M8 15.5a5 5 0 0 0 7.5-.4" class="icon"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></symbol>
+    <symbol id="focus" viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m6 0h5v-5" class="icon"/><circle cx="12" cy="12" r="4" class="icon"/></symbol>
+    <symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5" class="icon"/></symbol>
+    <symbol id="report" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3Zm8 0v5h4M9 12h6m-6 4h6" class="icon"/></symbol>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#glow)"/>
+  <rect width="1400" height="1050" fill="url(#dots)"/>
+  <g fill="none" stroke="#c9e699" opacity=".13"><circle cx="1210" cy="107" r="147"/><circle cx="1210" cy="107" r="210"/><path d="M916 0c-3 166 125 303 294 303"/></g>
+  <path d="m1210 32 20 55 55 20-55 20-20 55-20-55-55-20 55-20Z" fill="url(#lime)"/>
+  <circle cx="1097" cy="73" r="5" fill="#ed8058"/>
+
+  <g transform="translate(76 68)">
+    <rect width="8" height="8" y="-7" rx="4" fill="#cae993"/>
+    <text x="22" y="0" font-size="17" letter-spacing="3" fill="#d2dfbd" class="mono">INTELLIGENT OPINION / PRODUCT MVP</text>
+    <text x="0" y="100" font-size="66" font-weight="600" letter-spacing="-2" fill="#f4f3e9">从任务，到结果。</text>
+    <text x="3" y="151" font-size="24" fill="#a8bbaa" letter-spacing="1">自然语言入口 × Agent 编排 × 动态工作区</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="282" width="1248" height="638" rx="22" fill="url(#panel)"/>
+    <path d="M98 282h1204a22 22 0 0 1 22 22v49H76v-49a22 22 0 0 1 22-22Z" fill="#e5e9dc"/>
+    <path d="M76 353h1248" class="rule"/>
+    <g transform="translate(103 313)" fill="#a6b59e"><circle r="4"/><circle cx="15" r="4"/><circle cx="30" r="4"/></g>
+    <text x="166" y="323" font-size="19" font-weight="600" class="ink">智能舆情</text>
+    <path d="M270 306v24" stroke="#cbd3c0"/>
+    <text x="290" y="323" font-size="16" class="muted">动态工作区</text>
+    <rect x="1068" y="301" width="112" height="33" rx="16.5" fill="#d6deca"/>
+    <text x="1124" y="323" font-size="14" text-anchor="middle" fill="#617357">领导视角</text>
+    <rect x="1186" y="301" width="112" height="33" rx="16.5" fill="#253e32"/>
+    <text x="1242" y="323" font-size="14" text-anchor="middle" fill="#ecf3df">一线视角</text>
+
+    <path d="M458 353v567" class="rule"/>
+    <rect x="102" y="380" width="47" height="47" rx="15" fill="#263f33"/>
+    <use href="#spark" x="115" y="393" width="21" height="21" color="#d3ef9a"/>
+    <text x="165" y="399" font-size="20" font-weight="600" class="ink">AI 服务</text>
+    <text x="165" y="423" font-size="13" class="muted">用一句话，开始工作</text>
+
+    <rect x="120" y="457" width="309" height="57" rx="15" fill="#e4ead9"/>
+    <text x="141" y="492" font-size="19" class="ink">梳理今日重点舆情</text>
+    <g transform="translate(102 545)">
+      <use href="#spark" width="19" height="19" color="#708753"/>
+      <text x="31" y="17" font-size="16" font-weight="600" class="ink">把需求转成任务</text>
+      <text x="31" y="49" font-size="15" fill="#76836f">监测线索 · 研判事件 · 整理成果</text>
+    </g>
+    <path d="M122 634v114" stroke="#c4cdb8" stroke-width="2"/>
+    <g fill="#f5f5eb" stroke="#728b5c" stroke-width="2"><circle cx="122" cy="634" r="7"/><circle cx="122" cy="690" r="7"/><circle cx="122" cy="746" r="7"/></g>
+    <g font-size="17" class="ink"><text x="143" y="640">聚合监测信息</text><text x="143" y="696">关联事件与证据</text><text x="143" y="752">组织可读的分析结果</text></g>
+    <g transform="translate(101 823)">
+      <rect width="332" height="58" rx="13" fill="#fffef9" stroke="#ccd5c0" stroke-width="1.5"/>
+      <text x="17" y="36" font-size="16" fill="#9aa393">继续描述你的任务…</text>
+      <rect x="286" y="11" width="36" height="36" rx="10" fill="#263f33"/>
+      <use href="#arrow" x="294" y="19" width="20" height="20" color="#d3ef9a"/>
+    </g>
+
+    <text x="490" y="408" font-size="25" font-weight="600" class="ink">围绕任务，展开工作</text>
+    <text x="490" y="439" font-size="15" class="muted">信息、判断与交付，在同一工作区连接</text>
+    <rect x="1193" y="385" width="99" height="34" rx="17" fill="#e4ead8"/>
+    <text x="1242" y="407" font-size="13" text-anchor="middle" fill="#6a7c5d">工作区预览</text>
+
+    <g transform="translate(490 470)">
+      <rect width="383" height="167" rx="16" fill="#edf1e4" stroke="#dce4d0"/>
+      <rect x="21" y="22" width="39" height="39" rx="11" fill="#dbe5c9"/>
+      <use href="#radar" x="29" y="30" width="23" height="23" color="#5a7642"/>
+      <text x="74" y="48" font-size="21" font-weight="600" class="ink">日常监测</text>
+      <text x="23" y="92" font-size="16" class="muted">从分散的信息，到连续的线索</text>
+      <path d="M23 139 53 129 82 133 110 119 141 125 170 114 200 123 231 106 260 111 288 100 321 117 355 119" fill="none" stroke="#86a361" stroke-width="2.5"/>
+      <circle cx="355" cy="119" r="4" fill="#86a361"/>
+    </g>
+    <g transform="translate(893 470)">
+      <rect width="399" height="167" rx="16" fill="#f7f2e7" stroke="#e7dfcd"/>
+      <rect x="21" y="22" width="39" height="39" rx="11" fill="#ece0c9"/>
+      <use href="#focus" x="29" y="30" width="23" height="23" color="#a58a59"/>
+      <text x="74" y="48" font-size="21" font-weight="600" class="ink">专项监测</text>
+      <text x="23" y="92" font-size="16" class="muted">围绕主题，聚焦值得关注的变化</text>
+      <g font-size="13" fill="#8b7957"><rect x="23" y="116" width="91" height="28" rx="14" fill="#ece4d2"/><text x="68" y="135" text-anchor="middle">监测主题</text><rect x="125" y="116" width="91" height="28" rx="14" fill="#ece4d2"/><text x="170" y="135" text-anchor="middle">关键词组</text><rect x="227" y="116" width="91" height="28" rx="14" fill="#ece4d2"/><text x="272" y="135" text-anchor="middle">重点来源</text></g>
+    </g>
+    <g transform="translate(490 657)">
+      <rect width="383" height="171" rx="16" fill="#f1eee9" stroke="#e2ddd4"/>
+      <rect x="21" y="22" width="39" height="39" rx="11" fill="#ead7c9"/>
+      <use href="#layers" x="29" y="30" width="23" height="23" color="#b47d5b"/>
+      <text x="74" y="48" font-size="21" font-weight="600" class="ink">事件研判</text>
+      <text x="23" y="92" font-size="16" class="muted">把事实、观点与证据放在一起</text>
+      <g fill="none" stroke="#b79a81" stroke-width="1.5"><path d="M68 133h78m74 0h78"/><circle cx="47" cy="133" r="19"/><circle cx="183" cy="133" r="19"/><circle cx="319" cy="133" r="19"/></g>
+      <g font-size="12" fill="#9d8067" text-anchor="middle"><text x="47" y="137">线索</text><text x="183" y="137">证据</text><text x="319" y="137">研判</text></g>
+    </g>
+    <g transform="translate(893 657)">
+      <rect width="399" height="171" rx="16" fill="#273f33"/>
+      <rect x="21" y="22" width="39" height="39" rx="11" fill="#415845"/>
+      <use href="#report" x="29" y="30" width="23" height="23" color="#d1eba5"/>
+      <text x="74" y="48" font-size="21" font-weight="600" fill="#f0f3e8">成果中心</text>
+      <text x="23" y="92" font-size="16" fill="#b4c2aa">让分析沉淀为可阅读的成果</text>
+      <path d="M23 121h353" stroke="#4d634e"/>
+      <text x="23" y="148" font-size="13" fill="#d5e4bf" letter-spacing="1">研判报告 / 专题分析</text>
+      <use href="#arrow" x="353" y="132" width="24" height="24" color="#d1eba5"/>
+    </g>
+    <text x="491" y="878" font-size="14" fill="#87937b">自然语言发起</text>
+    <use href="#arrow" x="594" y="862" width="22" height="22" color="#9aa68a"/>
+    <text x="628" y="878" font-size="14" fill="#87937b">Agent 编排</text>
+    <use href="#arrow" x="716" y="862" width="22" height="22" color="#9aa68a"/>
+    <text x="750" y="878" font-size="14" fill="#87937b">动态呈现</text>
+    <text x="1292" y="878" text-anchor="end" font-size="12" letter-spacing="1.6" fill="#a1a98f" class="mono">CONCEPT VIEW</text>
+  </g>
+
+  <path d="M77 967h1247" stroke="#829578" stroke-opacity=".35"/>
+  <text x="77" y="1004" font-size="15" letter-spacing="3.3" fill="#bdd18f" class="mono">FROM TOOL TO SERVICE</text>
+  <text x="1324" y="1004" text-anchor="end" font-size="15" letter-spacing="2" fill="#94aa95">产品概念预览</text>
+</svg>
