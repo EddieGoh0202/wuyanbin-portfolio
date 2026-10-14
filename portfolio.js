@@ -1,4 +1,5 @@
 const projectData={
+  scheduler:{"kicker": "07 / BANXIAOZHI · AGENT PRODUCT", "title": "班小智 · 智能排班助手", "summary": "一句话提出门店需求，交付有依据、可校验的每周排班。", "problem": "小型门店需要同时兼顾人数、技能覆盖、员工可用时间、请假、工时与班次偏好；临时请假、新品增员或单班停业又让手工改表反复返工。", "contribution": "从场景和规则拆解出发，设计对话与动态工作区、待确认计划、排班解释和缺口补救，并完成 React / TypeScript 前端、Node Agent 网关、约束求解与回归验证。", "solution": "自然语言 → 结构化工具计划 → 白名单与语义校验 → 管理员确认 → Worker 中求解 → 独立硬规则校验 → 安排说明 / 缺口建议 → PDF 与 CSV。模型负责理解，排班由求解器生成。", "result": "20 名虚构员工的 2026-10-12 示例周生成 64 人次 / 512 小时，本周硬冲突与人数技能缺口为 0；2026-10-13 留档为 74 项自动回归与 14 类真实模型场景最终符合预期（首轮 13/14，超时项重试通过）。静态体验支持本地模板理解、手工调整与导出，模型版由作者安排演示。", "links": [{"label": "直接体验本地规则版", "href": "portfolio-assets/banxiaozhi/demo/index.html"}, {"label": "查看产品界面", "media": "scheduler"}, {"label": "下载排班样例 PDF", "href": "portfolio-assets/banxiaozhi/schedule-sample.pdf", "download": true}]},
   opinion:{kicker:'02 / TEST_02 · AI DRIVER',title:'舆情智能分析与监测 Agent',summary:'基于 React 与 Python 的 AI 主驾工程，用自然语言调度画像、监测方案、事件研判和报告工作区。',problem:'从一句业务需求走到可执行监测，需要连续处理用户画像、检索范围、关键词、研判专家和结果交付；传统页面切换让这条链路被切碎。',contribution:'围绕业务需求组织对话入口与协同工作区，将监测范围编辑、人工确认、事件研判和报告交付串成可追踪的任务流程。',solution:'前端使用 HomeV2、DriverShell 和统一状态模型承接对话；Python Supervisor 编排 16 个 Worker，覆盖画像、意图、风险、监测、事件与报告，并将结构化结果返回对应工作区。',result:'保留真实前端组件，提供监测方案编辑→确认→示例信息→事件研判→示例报告的可交互体验。展示版使用本地样例；真实采集、模型分析与业务写入依赖后端和授权配置。',links:[{label:'体验 test_02 AI 主驾',href:'portfolio-assets/test02/index.html'}]},
   lab:{kicker:'03 / MINI PROGRAM · PRODUCT',title:'实验室设备时空地理围栏管理',summary:'让共享实验室的预约、签到、超时释放和通知真正形成闭环。',problem:'设备使用依赖群聊和纸面登记，预约后不到场、资源冲突与值日遗漏频繁发生，管理员很难实时确认现场状态。',contribution:'梳理预约状态机与异常分支，设计 300 米地理围栏签到、防作弊校验、超时释放和群消息通知流程，并参与小程序界面与素材制作。',solution:'以“预约中—待签到—使用中—已释放”为核心状态，结合微信定位 API 校验到场距离；超时自动释放设备并触发提醒，减少人工追踪。',result:'设备利用率提升 42%，资源冲突下降 95%，值日遗漏降至 0%。',links:[{label:'查看演示视频',href:'portfolio-assets/lab-demo.mp4'}]},
   feedback:{kicker:'04 / WORKFLOW · OPERATIONS',title:'学生会问卷反馈 AI 自动化',summary:'把分散的问卷原话转成一份能推动行动的运营洞察报告。',problem:'问卷回收后，人工整理分类、统计共性问题和撰写总结耗时，反馈难以被快速转成优先级和执行建议。',contribution:'设计从数据清洗到分类、聚类、摘要、洞察和建议的工作流，编写提示词并用真实样本反复校验输出质量。',solution:'问卷输入 → AI 主题分类 → 高频问题聚类 → 代表性原话提炼 → 运营洞察 → 可执行建议，最终自动生成结构化报告。',result:'将 90+ 条反馈压缩成可阅读、可讨论、可分工的洞察材料，支持学生会快速定位体验问题。',links:[{label:'查看工作流图',href:'portfolio-assets/workflow.png'},{label:'打开洞察报告',href:'portfolio-assets/运营洞察报告.pdf'}]},
@@ -46,7 +47,7 @@ const openModal = key => {
   const actions = document.querySelector('#modal-actions'); actions.replaceChildren();
   data.links.forEach(link => {
     if (link.media) { const button = make('button', 'case-media-button', `${link.label} ↗`); button.type = 'button'; button.addEventListener('click', () => openMedia(link.media)); actions.append(button); }
-    else actions.append(fileLink(`${link.label} ↗`, link.href));
+    else actions.append(fileLink(`${link.label} ↗`, link.href, link.download === true));
   });
   modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false');
   modal.querySelector('.modal-panel').scrollTop = 0;
@@ -60,6 +61,7 @@ const closeModal = () => {
 };
 
 const mediaInfo = {
+  scheduler: { title: "班小智 · 产品界面与交付", note: "真实产品截图 · 20 名虚构员工 · 示例周 2026-10-12 至 10-18" },
   resume: { title: '吴炎斌 · 个人简历', note: '原版简历 · 可直接阅读或下载 PDF', url: 'portfolio-assets/简历-吴炎斌.pdf' },
   contact: { title: '联系吴炎斌', note: '欢迎交流 AI 产品、Agent 与项目实践。' },
   samples: { title: '公众号文章样本库', note: '63 篇参考语料 · 可搜索并展开原文；语料用于结构研究，不代表本人原创。' },
@@ -76,7 +78,20 @@ async function openMedia(kind) {
   mediaContent.replaceChildren(); mediaTools.replaceChildren(); mediaDialog.dataset.kind = kind;
   if (info.url) mediaTools.append(fileLink(kind === 'workflow' ? '下载高清 PNG' : ['report', 'resume'].includes(kind) ? '下载原版 PDF' : '下载文件', kind === 'workflow' ? 'portfolio-assets/workflow.png' : info.url, true));
   const notice = make('p', 'media-error', '材料加载失败，请使用上方下载按钮保存后查看。'); notice.hidden = true;
-  if (kind === 'video') {
+  if (kind === 'scheduler') {
+    mediaTools.append(fileLink('打开本地规则体验', 'portfolio-assets/banxiaozhi/demo/index.html'), fileLink('下载排班样例 PDF', 'portfolio-assets/banxiaozhi/schedule-sample.pdf', true));
+    for (const [file, title, detail] of [
+      ['workspace.jpg', '01 / 排班工作台', '对话、规则与结果同屏；手工调整后再次检查。'],
+      ['confirmation.jpg', '02 / 先确认，再修改', '将自然语言展开为明确员工、日期、班次和规则的待确认计划。'],
+      ['schedule-report.png', '03 / 可带走的排班表', '每人每天最多一个班，汇总周工时、覆盖情况与安排依据。']
+    ]) {
+      const figure = make('figure', 'scheduler-gallery-item');
+      const image = make('img', 'scheduler-gallery-image'); image.src = `portfolio-assets/banxiaozhi/${file}`; image.alt = title + '：' + detail; image.loading = 'lazy';
+      image.addEventListener('error', () => { notice.hidden = false; });
+      figure.append(make('h3', '', title), make('p', '', detail), image); mediaContent.append(figure);
+    }
+    mediaContent.append(make('p', 'media-state', '本地规则体验不调用模型服务；模型版已做独立验收，演示请联系作者。当前仅校验本周配置。'));
+  } else if (kind === 'video') {
     const video = make('video', 'case-video'); video.controls = true; video.playsInline = true; video.preload = 'metadata'; video.src = info.url;
     video.setAttribute('aria-label', '实验室小程序演示视频');
     video.addEventListener('error', () => { notice.hidden = false; });
